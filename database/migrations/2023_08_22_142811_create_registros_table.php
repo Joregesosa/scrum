@@ -14,13 +14,13 @@ return new class extends Migration
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
             $table->date('meta_fecha');
-            $table->text('que');
-            $table->text('porque');
-            $table->text('como');
-            $table->text('cuando');
-            $table->text('donde');
-            $table->text('conquien');
-            $table->text('costo');
+            $table->text('que')->nullable();
+            $table->text('porque')->nullable();
+            $table->text('como')->nullable();
+            $table->text('cuando')->nullable();
+            $table->text('donde')->nullable();
+            $table->text('conquien')->nullable();
+            $table->text('costo')->nullable();
             $table->unsignedBigInteger('usuario_id');
             $table->unsignedBigInteger('subcategoria_id');
             $table->foreign('usuario_id')->references('id')->on('usuarios');
