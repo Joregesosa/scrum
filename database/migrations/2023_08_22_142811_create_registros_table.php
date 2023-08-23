@@ -13,6 +13,18 @@ return new class extends Migration
     {
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
+            $table->date('meta_fecha');
+            $table->text('que');
+            $table->text('porque');
+            $table->text('como');
+            $table->text('cuando');
+            $table->text('donde');
+            $table->text('conquien');
+            $table->text('costo');
+            $table->unsignedBigInteger('usuario_id');
+            $table->unsignedBigInteger('subcategoria_id');
+            $table->foreign('usuario_id')->references('id')->on('usuarios');
+            $table->foreign('subcategoria_id')->references('id')->on('subcategorias');
             $table->timestamps();
         });
     }

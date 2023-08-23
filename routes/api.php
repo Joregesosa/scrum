@@ -1,19 +1,24 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\CategoriasController;
+use App\Http\Controllers\PaisesController;
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\SubcategoriasController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/* Roles */
+Route::get('/rol', [RolesController::class, 'index']);
+Route::post('/rol/new', [RolesController::class, 'create']);
+
+/* categorias */
+Route::get('/categorias', [CategoriasController::class, 'index']);
+Route::post('/categorias/new', [CategoriasController::class, 'create']);
+
+/* subCategorias */
+Route::get('/subcategorias', [SubcategoriasController::class, 'index']);
+Route::post('/subcategorias/new', [SubcategoriasController::class, 'create']);
+
+/* Paises */
+Route::get('/paises', [PaisesController::class, 'index']);
+Route::post('/paises/new', [PaisesController::class, 'create']);
