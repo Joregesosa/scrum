@@ -23,7 +23,7 @@ class UsuariosController extends Controller
             'vision',
             'status',
             'pais_id',
-            'curso_id',
+            'curso_id'
         )->get();
 
 

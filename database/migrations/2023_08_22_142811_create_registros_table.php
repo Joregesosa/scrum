@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
-            $table->date('meta_fecha');
+            $table->year('meta_fecha');
             $table->text('que')->nullable();
             $table->text('porque')->nullable();
             $table->text('como')->nullable();

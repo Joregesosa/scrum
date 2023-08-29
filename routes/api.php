@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoriasController;
 use App\Http\Controllers\CursosController;
+use App\Http\Controllers\MetasController;
 use App\Http\Controllers\PaisesController;
 use App\Http\Controllers\RegistrosController;
 use App\Http\Controllers\RolesController;
@@ -41,3 +42,10 @@ Route::post('/curso', [CursosController::class, 'create']);
 Route::get('/registros', [RegistrosController::class, 'index']);
 Route::post('/registro', [RegistrosController::class, 'create']);
 Route::post('/registro/{id}', [RegistrosController::class, 'update']);
+
+
+/* Registro - new Year*/
+Route::get('/metas/{id}', [MetasController::class, 'index']);
+
+// Route::post('/registro', [RegistrosController::class, 'create']);
+// Route::post('/registro/{id}', [RegistrosController::class, 'update']);

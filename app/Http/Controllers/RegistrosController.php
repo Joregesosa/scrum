@@ -30,6 +30,8 @@ class RegistrosController extends Controller
 
             $registros->save();
         }
+
+         
     }
 
     public function update(Request $request)
